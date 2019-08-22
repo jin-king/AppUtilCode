@@ -1,6 +1,7 @@
 package com.erick.kkk
 
 import android.app.Application
+import com.erick.kkk.singleton.SingletonLazy
 import com.erick.module_util.log.BlockDetectByPrinter
 
 /**
@@ -13,5 +14,6 @@ class MyApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         BlockDetectByPrinter.start()
+        SingletonLazy.INSTANCE.test()
     }
 }

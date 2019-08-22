@@ -1,0 +1,23 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.erick.module_logcat">
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application>
+        <service android:name=".service.LogcatViewerService"
+                 android:label="LogcatLoggerService"/>
+
+        <service android:name=".service.LogcatViewerFloatingView"
+                 android:label="LogcatLoggerFloatingView"/>
+
+        <provider
+                android:name=".service.LogFileProvider"
+                android:authorities="com.erick.module_logcat.fileProvider"
+                android:exported="false"
+                android:grantUriPermissions="true">
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/file_paths"/>
+        </provider>
+
+    </application>
+</manifest>
