@@ -1,6 +1,7 @@
 package com.erick.kkk
 
 import android.app.Application
+import com.erick.kkk.singleton.SampleManager
 import com.erick.kkk.singleton.SingletonLazy
 import com.erick.module_util.log.BlockDetectByPrinter
 
@@ -15,5 +16,6 @@ class MyApplication : Application() {
         super.onCreate()
         BlockDetectByPrinter.start()
         SingletonLazy.INSTANCE.test()
+        SampleManager.getInstance(this).test()
     }
 }
