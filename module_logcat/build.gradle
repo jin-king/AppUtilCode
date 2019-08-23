@@ -39,7 +39,7 @@ publish {
     repoName = 'MyMaven'
     groupId = 'com.erick.util'//jcenter上的路径
     artifactId = 'logcat-view' //项目名称
-    publishVersion = '1.0.0'//版本号
+    publishVersion = '1.0.1'//版本号
     desc = 'app logcat view'//描述
     website = 'https://github.com/jin-king/AppUtilCode'
 }
